@@ -13,7 +13,7 @@ export default class Reset extends Component {
         e.preventDefault();
         const { email } = this.state;
         console.log(email );
-        fetch("http://localhost:5000/forgot-password", {
+        fetch("https://backend-production-c067.up.railway.app/forgot-password", {
             method:"POST",
             crossDomain:true,
             headers:{

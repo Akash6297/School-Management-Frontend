@@ -14,7 +14,7 @@ export default function AdminHome({ userData }) {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/getAllUser", {
+    fetch("https://backend-production-c067.up.railway.app/getAllUser", {
       method: "GET",
     })
       .then((res) => res.json())
