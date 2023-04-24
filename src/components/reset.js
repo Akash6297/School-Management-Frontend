@@ -13,7 +13,7 @@ export default class Reset extends Component {
         e.preventDefault();
         const { email } = this.state;
         console.log(email );
-        fetch("https://backend-production-c067.up.railway.app/forgot-password", {
+        fetch("https://upset-cow-miniskirt.cyclic.app/forgot-password", {
             method:"POST",
             crossDomain:true,
             headers:{

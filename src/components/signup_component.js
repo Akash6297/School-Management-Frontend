@@ -16,7 +16,7 @@ export default function SignUp() {
       e.preventDefault();
 
       console.log(fname, lname, email, password);
-      fetch("https://backend-production-c067.up.railway.app/register", {
+      fetch("https://upset-cow-miniskirt.cyclic.app/register", {
         method: "POST",
         crossDomain: true,
         headers: {

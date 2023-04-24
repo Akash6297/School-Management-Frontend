@@ -14,7 +14,7 @@ export default function AdminHome({ userData }) {
 
 
   useEffect(() => {
-    fetch("https://backend-production-c067.up.railway.app/getAllUser", {
+    fetch("https://upset-cow-miniskirt.cyclic.app/getAllUser", {
       method: "GET",
     })
       .then((res) => res.json())

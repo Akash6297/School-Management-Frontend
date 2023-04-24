@@ -8,7 +8,7 @@ export default function UserDetails() {
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("https://backend-production-c067.up.railway.app/userData", {
+    fetch("https://upset-cow-miniskirt.cyclic.app/userData", {
       method: "POST",
       crossDomain: true,
       headers: {

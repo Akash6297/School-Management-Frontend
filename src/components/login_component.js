@@ -8,7 +8,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("https://backend-production-c067.up.railway.app/login-user", {
+    fetch("https://upset-cow-miniskirt.cyclic.app/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
