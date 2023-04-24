@@ -14,7 +14,9 @@ export default function AdminHome({ userData }) {
 
 
   useEffect(() => {
+
     fetch("https://schoolbackend-xmj7.onrender.com/getAllUser", {
+
       method: "GET",
     })
       .then((res) => res.json())

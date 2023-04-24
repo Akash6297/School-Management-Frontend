@@ -13,7 +13,9 @@ export default class Reset extends Component {
         e.preventDefault();
         const { email } = this.state;
         console.log(email );
+
         fetch("https://schoolbackend-xmj7.onrender.com/forgot-password", {
+
             method:"POST",
             crossDomain:true,
             headers:{

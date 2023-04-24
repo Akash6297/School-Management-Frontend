@@ -8,7 +8,9 @@ export default function UserDetails() {
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
+
     fetch("https://schoolbackend-xmj7.onrender.com/userData", {
+
       method: "POST",
       crossDomain: true,
       headers: {
