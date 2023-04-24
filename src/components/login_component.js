@@ -8,7 +8,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
+    fetch("https://schoolbackend-xmj7.onrender.com/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -30,6 +30,9 @@ export default function Login() {
           window.localStorage.setItem("loggedIn", true);
 
           window.location.href = "./userDetails";
+        }else {
+          alert("Something went wrong");
+          
         }
       });
   }

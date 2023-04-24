@@ -9,7 +9,7 @@ export default function SignUp() {
   const [secretKey, setSecretKey] = useState("");
 
   const handleSubmit = (e) => {
-    if (userType === "Admin" && secretKey !== "AdarshT") {
+    if (userType === "Admin" && secretKey !== "Akash") {
       e.preventDefault();
       alert("Invalid Admin");
     } else {
@@ -37,8 +37,12 @@ export default function SignUp() {
           console.log(data, "userRegister");
           if (data.status === "ok") {
             alert("Registration Successful");
+            window.localStorage.setItem("token", data.data);
+          window.localStorage.setItem("loggedIn", true);
+            window.location.href = "./sign-in";
           } else {
             alert("Something went wrong");
+            
           }
         });
     }

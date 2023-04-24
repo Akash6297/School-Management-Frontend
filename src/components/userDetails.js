@@ -8,7 +8,7 @@ export default function UserDetails() {
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/userData", {
+    fetch("https://schoolbackend-xmj7.onrender.com/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
