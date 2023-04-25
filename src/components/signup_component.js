@@ -17,6 +17,7 @@ export default function SignUp() {
 
       console.log(fname, lname, email, password);
       fetch("https://upset-cow-miniskirt.cyclic.app/register", {
+      // fetch("http://localhost:5000/register", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -41,7 +42,7 @@ export default function SignUp() {
           window.localStorage.setItem("loggedIn", true);
             window.location.href = "./sign-in";
           } else {
-            alert("Something went wrong");
+            alert("Something went wrong" + console.error());
             
           }
         });

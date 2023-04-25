@@ -9,7 +9,8 @@ import SignUp from './components/signup_component'
 import UserDetails from "./components/userDetails";
 import Reset from "./components/reset";
 // import Reset_Password from "./components/reset_password";
-// import AdminHome from "./adminHome";
+import AdminHome from "./components/adminHome";
+import UserHome from "./components/userHome";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -45,7 +46,8 @@ function App() {
               <Route path="/userDetails" element={<UserDetails />} />
               <Route path="/reset" element={<Reset />} />
               {/* <Route path="/reset_password" element={<Reset_Password/>} /> */}
-              {/* <Route path="/adminHome" element={<AdminHome />} /> */}
+              <Route path="/adminHome" element={<AdminHome />} />
+              <Route path="/userHome" element={<UserHome />} />
               
 
             </Routes>

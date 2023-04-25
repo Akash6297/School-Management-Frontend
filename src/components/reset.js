@@ -15,6 +15,7 @@ export default class Reset extends Component {
         console.log(email );
 
         fetch("https://schoolbackend-xmj7.onrender.com/forgot-password", {
+        // fetch("http://localhost:5000/forgot-password", {
 
             method:"POST",
             crossDomain:true,

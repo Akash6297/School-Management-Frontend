@@ -3,7 +3,8 @@ import AdminHome from "./adminHome";
 
 import UserHome from "./userHome";
 
-export default function UserDetails() {
+export default function UserDetails (){
+
   const [userData, setUserData] = useState("");
   const [admin, setAdmin] = useState(false);
 
