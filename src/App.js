@@ -11,6 +11,7 @@ import Reset from "./components/reset";
 // import Reset_Password from "./components/reset_password";
 import AdminHome from "./components/adminHome";
 import UserHome from "./components/userHome";
+import ImageUpload from "./components/imageUpload";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -51,7 +52,7 @@ function App() {
               
 
             </Routes>
-          
+          <ImageUpload/>
       </div>
     </Router>
   )
