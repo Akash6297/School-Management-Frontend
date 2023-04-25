@@ -82,8 +82,10 @@ export default function Login() {
             </button>
           </div>
           <p className="forgot-password text-right">
-            <a href="/reset">Forgot?</a>
+            <a href="/sign-up">Sign-up?</a>
+
           </p>
+
         </form>
       </div>
     </div>
