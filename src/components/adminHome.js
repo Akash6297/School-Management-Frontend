@@ -1,6 +1,6 @@
-import React, {  useEffect, useState } from "react";
-// import { faTrash } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Component, useEffect, useState } from "react";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import ReactPaginate from 'react-paginate';
 // import { useRef } from "react";
 export default function AdminHome({ userData }) {
@@ -13,10 +13,17 @@ export default function AdminHome({ userData }) {
 
 
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   currentPage.current=1;
+  //   // getAllUser();
+  //   getPaginatedUsers();
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
+
+  //fetching all user
+  const getAllUser = () => {
     fetch("https://schoolbackend-xmj7.onrender.com/getAllUser", {
-
       method: "GET",
     })
       .then((res) => res.json())
@@ -24,21 +31,7 @@ export default function AdminHome({ userData }) {
         console.log(data, "userData");
         setData(data.data);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-
-  //fetching all user
-  // const getAllUser = () => {
-  //   fetch("http://localhost:5000/getAllUser", {
-  //     method: "GET",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data, "userData");
-  //       setData(data.data);
-  //     });
-  // };
+  };
 
 
 
@@ -50,28 +43,28 @@ export default function AdminHome({ userData }) {
 
 
   //deleting user
-  // const deleteUser = (id, name) => {
-  //   if (window.confirm(`Are you sure you want to delete ${name}`)) {
-  //     fetch("http://localhost:5000/deleteUser", {
-  //       method: "POST",
-  //       crossDomain: true,
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //         "Access-Control-Allow-Origin": "*",
-  //       },
-  //       body: JSON.stringify({
-  //         userid: id,
-  //       }),
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         alert(data.data);
-  //         getAllUser();
-  //       });
-  //   } else {
-  //   }
-  // };
+  const deleteUser = (id, name) => {
+    if (window.confirm(`Are you sure you want to delete ${name}`)) {
+      fetch("https://schoolbackend-xmj7.onrender.com/deleteUser", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          userid: id,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.data);
+          getAllUser();
+        });
+    } else {
+    }
+  };
 
   //pagination
   // function handlePageClick(e) {
@@ -87,7 +80,7 @@ export default function AdminHome({ userData }) {
   // }
 
   // function getPaginatedUsers(){
-  //   fetch(`http://localhost:5000/paginatedUsers?page=${currentPage.current}&limit=${limit}`, {
+  //   fetch(`https://schoolbackend-xmj7.onrender.com/paginatedUsers?page=${currentPage.current}&limit=${limit}`, {
   //     method: "GET",
   //   })
   //     .then((res) => res.json())
@@ -118,14 +111,12 @@ export default function AdminHome({ userData }) {
                 <td>{i.fname}</td>
                 <td>{i.email}</td>
                 <td>{i.userType}</td>
-                <td>{i.Delete}</td>
-                <td></td>
-                {/* <td>
+                <td>
                   <FontAwesomeIcon
                     icon={faTrash}
                     onClick={() => deleteUser(i._id, i.fname)}
                   />
-                </td> */}
+                </td>
               </tr>
             );
           })}
@@ -149,8 +140,8 @@ export default function AdminHome({ userData }) {
           activeClassName="active"
           forcePage={currentPage.current-1}
         /> */}
-        {/* <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/> */}
-        {/* <button onClick={changeLimit}>Set Limit</button> */}
+        {/* <input placeholder="Limit" onChange={e=>setLimit(e.target.value)}/>
+        <button onClick={changeLimit}>Set Limit</button> */}
         <button onClick={logOut} className="btn btn-primary">
           Log Out
         </button>
