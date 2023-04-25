@@ -84,6 +84,9 @@ export default function Login() {
           <p className="forgot-password text-right">
             <a href="/sign-up">Sign-up?</a>
           </p>
+<Link className="nav-link" to={'/sign-up'}>
+                    Sign up
+                  </Link>
         </form>
       </div>
     </div>
