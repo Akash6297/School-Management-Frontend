@@ -16,7 +16,7 @@ export default function SignUp() {
       e.preventDefault();
 
       console.log(fname, lname, email, password);
-      fetch("https://upset-cow-miniskirt.cyclic.app/register", {
+      fetch("https://schoolbackend-xmj7.onrender.com/register", {
       // fetch("http://localhost:5000/register", {
         method: "POST",
         crossDomain: true,
