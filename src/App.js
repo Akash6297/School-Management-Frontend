@@ -36,6 +36,11 @@ function App() {
                     Sign up
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/imageUpload'}>
+                  ImageUpload
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -49,6 +54,7 @@ function App() {
               {/* <Route path="/reset_password" element={<Reset_Password/>} /> */}
               <Route path="/adminHome" element={<AdminHome />} />
               <Route path="/userHome" element={<UserHome />} />
+              <Route path="/imageUpload" element={<ImageUpload />} />
               
 
             </Routes>

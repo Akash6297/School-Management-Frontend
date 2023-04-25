@@ -52,7 +52,7 @@ function ImageUpload() {
                     type="file"
                     onChange={covertToBase64}
                 />
-                {image == "" || image == null ? "" : <image width={100} height={100} src={image} />}
+                {image === "" || image == null ? "" : <image width={100} height={100} src={image} />}
                 <button onClick={uploadImage}>Upload</button>
 <br/>
                 {allImage.map(data=>{
