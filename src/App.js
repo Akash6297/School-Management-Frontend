@@ -51,14 +51,12 @@ function App() {
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/userDetails" element={<UserDetails />} />
               <Route path="/reset" element={<Reset />} />
-              {/* <Route path="/reset_password" element={<Reset_Password/>} /> */}
               <Route path="/adminHome" element={<AdminHome />} />
               <Route path="/userHome" element={<UserHome />} />
               <Route path="/imageUpload" element={<ImageUpload />} />
               
 
             </Routes>
-          {/* <ImageUpload/> */}
       </div>
     </Router>
   )

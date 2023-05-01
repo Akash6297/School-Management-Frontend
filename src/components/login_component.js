@@ -82,7 +82,8 @@ export default function Login() {
             </button>
           </div>
           <p className="forgot-password text-right">
-            <a href="/sign-up">Sign-up?</a>
+          Don,t have a Account then <a href="/sign-up">Sign-up?</a>
+            <a href="/reset">Forgot?</a>
 
           </p>
 
