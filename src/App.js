@@ -58,7 +58,7 @@ function App() {
               
 
             </Routes>
-          <ImageUpload/>
+          {/* <ImageUpload/> */}
       </div>
     </Router>
   )

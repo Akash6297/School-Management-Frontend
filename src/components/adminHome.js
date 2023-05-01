@@ -111,6 +111,7 @@ export default function AdminHome({ userData }) {
                 <td>{i.fname}</td>
                 <td>{i.email}</td>
                 <td>{i.userType}</td>
+                {/* <td>{i.Delete}</td> */}
                 <td>
                   <FontAwesomeIcon
                     icon={faTrash}
