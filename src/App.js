@@ -21,10 +21,11 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
-            <Link className="navbar-brand" to={'/sign-in'}>
-              positronX
+            {/* <Link className="navbar-brand" to={'/sign-in'}> */}
+            <Link className="navbar-brand" to={'https://chayan05.github.io/mini-project/'}>
+              Home
             </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to={'/sign-in'}>
@@ -42,7 +43,7 @@ function App() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </nav>   
             <Routes>
