@@ -62,7 +62,7 @@ export default function SignUp() {
               value="User"
               onChange={(e) => setUserType(e.target.value)}
             />
-            User
+            Student
             <input
               type="radio"
               name="UserType"
